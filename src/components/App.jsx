@@ -46,18 +46,19 @@ export const App = () => {
 
   return (
     <>
-      <Section title={'Please leave feedback'} />
-      <FeedbackOptions
-        options={['Good', 'Neutral', 'Bad']}
-        onLeaveFeedback={handleButtonClick}
-      />
-      <Statistics
-        good={state.good}
-        neutral={state.neutral}
-        bad={state.bad}
-        total={total}
-        positivePercentage={countPositiveFeedbackPercentage()}
-      />
+      <Section title={'Please leave feedback'}>
+        <FeedbackOptions
+          options={['Good', 'Neutral', 'Bad']}
+          onLeaveFeedback={handleButtonClick}
+        />
+        <Statistics
+          good={state.good}
+          neutral={state.neutral}
+          bad={state.bad}
+          total={total}
+          positivePercentage={countPositiveFeedbackPercentage()}
+        />{' '}
+      </Section>
     </>
   );
 };
