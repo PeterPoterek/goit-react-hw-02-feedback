@@ -1,16 +1,13 @@
+import FeedbackOptions from './FeedbackOptions/FeedbackOptions.jsx';
+import Section from './Section/Section.jsx';
+import Statistics from './Statistics/Statistics.jsx';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <Section />
+      <Statistics />
+      <FeedbackOptions />
+    </>
   );
 };
