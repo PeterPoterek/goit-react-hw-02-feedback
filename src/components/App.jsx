@@ -9,7 +9,13 @@ export const App = () => {
     setTotal(total + 1);
   };
 
-  const countPositiveFeedbackPercentage = () => {};
+  const countPositiveFeedbackPercentage = () => {
+    if (total === 0) {
+      return 0;
+    }
+
+    return Math.round((state.good / total) * 100);
+  };
 
   const [state, setState] = useState({
     good: 0,
@@ -21,6 +27,7 @@ export const App = () => {
 
   const handleButtonClick = e => {
     const buttonClickedValue = e.target.textContent;
+
     setState(prevState => {
       switch (buttonClickedValue) {
         case 'Good':
@@ -49,7 +56,7 @@ export const App = () => {
         neutral={state.neutral}
         bad={state.bad}
         total={total}
-        positivePercentage={0}
+        positivePercentage={countPositiveFeedbackPercentage()}
       />
     </>
   );
