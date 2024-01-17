@@ -13,7 +13,6 @@ export const App = () => {
 
   const handleStateChange = e => {
     const buttonClicked = e.target.textContent;
-
     setState(prevState => {
       switch (buttonClicked) {
         case 'Good':
@@ -27,6 +26,7 @@ export const App = () => {
           return prevState;
       }
     });
+    setTotal(total + 1);
   };
   const [total, setTotal] = useState(0);
 
