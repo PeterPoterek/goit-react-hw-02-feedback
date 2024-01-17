@@ -1,5 +1,5 @@
-const Section = () => {
-  return <div>Section</div>;
+const Section = ({ title }) => {
+  return <h1>{title}</h1>;
 };
 
 export default Section;
