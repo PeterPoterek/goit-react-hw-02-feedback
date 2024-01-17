@@ -1,9 +1,13 @@
-const FeedbackOptions = () => {
+const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <>
-      <button>Good</button>
-      <button>Neutral</button>
-      <button>Bad</button>
+      {options.map((option, index) => {
+        return (
+          <button key={index} onClick={onLeaveFeedback}>
+            {option}
+          </button>
+        );
+      })}
     </>
   );
 };
