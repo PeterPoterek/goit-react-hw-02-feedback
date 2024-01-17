@@ -11,10 +11,10 @@ export const App = () => {
     bad: 0,
   });
 
-  const handleStateChange = e => {
-    const buttonClicked = e.target.textContent;
+  const handleButtonClick = e => {
+    const buttonClickedValue = e.target.textContent;
     setState(prevState => {
-      switch (buttonClicked) {
+      switch (buttonClickedValue) {
         case 'Good':
           return { ...prevState, good: prevState.good + 1 };
         case 'Neutral':
@@ -35,7 +35,7 @@ export const App = () => {
       <Section title={'Please leave feedback'} />
       <FeedbackOptions
         options={['Good', 'Neutral', 'Bad']}
-        onLeaveFeedback={handleStateChange}
+        onLeaveFeedback={handleButtonClick}
       />
       <Statistics
         good={state.good}
