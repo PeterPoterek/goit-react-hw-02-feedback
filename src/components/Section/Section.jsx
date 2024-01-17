@@ -1,9 +1,17 @@
+import {
+  SectionContainer,
+  SectionWrapper,
+  SectionTitle,
+} from './SectionStyles';
+
 const Section = ({ title, children }) => {
   return (
-    <div>
-      <h2>{title}</h2>
-      {children}
-    </div>
+    <SectionContainer>
+      <SectionWrapper>
+        <SectionTitle>{title}</SectionTitle>
+        {children}
+      </SectionWrapper>
+    </SectionContainer>
   );
 };
 
