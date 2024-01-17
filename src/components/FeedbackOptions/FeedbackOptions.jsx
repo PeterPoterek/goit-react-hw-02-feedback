@@ -1,14 +1,19 @@
+import {
+  FeedbackOptionsContainer,
+  FeedbackButton,
+} from './FeedbackOptionsStyles';
+
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <>
+    <FeedbackOptionsContainer>
       {options.map((option, index) => {
         return (
-          <button key={index} onClick={onLeaveFeedback}>
+          <FeedbackButton key={index} onClick={onLeaveFeedback}>
             {option}
-          </button>
+          </FeedbackButton>
         );
       })}
-    </>
+    </FeedbackOptionsContainer>
   );
 };
 
