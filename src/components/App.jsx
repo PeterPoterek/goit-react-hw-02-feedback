@@ -5,11 +5,19 @@ import Section from './Section/Section.jsx';
 import Statistics from './Statistics/Statistics.jsx';
 
 export const App = () => {
+  const countTotalFeedback = () => {
+    setTotal(total + 1);
+  };
+
+  const countPositiveFeedbackPercentage = () => {};
+
   const [state, setState] = useState({
     good: 0,
     neutral: 0,
     bad: 0,
   });
+
+  const [total, setTotal] = useState(0);
 
   const handleButtonClick = e => {
     const buttonClickedValue = e.target.textContent;
@@ -26,9 +34,8 @@ export const App = () => {
           return prevState;
       }
     });
-    setTotal(total + 1);
+    countTotalFeedback();
   };
-  const [total, setTotal] = useState(0);
 
   return (
     <>
