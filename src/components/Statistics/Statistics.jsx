@@ -1,4 +1,5 @@
 import Notification from '../Notification/Notification.jsx';
+import { StatisticsUl } from './StatisticsStyles.js';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
@@ -8,13 +9,13 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
       {total === 0 ? (
         <Notification message={'There is no feedback'} />
       ) : (
-        <ul>
+        <StatisticsUl>
           <li>Good: {good}</li>
           <li>Neutral: {neutral}</li>
           <li>Bad: {bad}</li>
           <li>Total: {total}</li>
           <li>Positive Feedback: {positivePercentage}%</li>
-        </ul>
+        </StatisticsUl>
       )}
     </>
   );

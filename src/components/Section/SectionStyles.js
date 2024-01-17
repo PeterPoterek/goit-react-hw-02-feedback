@@ -26,4 +26,6 @@ export const SectionWrapper = styled.div`
 export const SectionTitle = styled.h1`
   margin-top: 0;
   margin-bottom: 2rem;
+
+  font-size: 3rem;
 `;
