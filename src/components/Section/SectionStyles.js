@@ -8,7 +8,7 @@ export const SectionContainer = styled.div`
 `;
 
 export const SectionWrapper = styled.div`
-  max-width: 500px;
+  max-width: 750px;
   background-color: #334155;
 
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
