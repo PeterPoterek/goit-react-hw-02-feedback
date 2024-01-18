@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
   SectionContainer,
   SectionWrapper,
@@ -13,6 +15,11 @@ const Section = ({ title, children }) => {
       </SectionWrapper>
     </SectionContainer>
   );
+};
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Section;
