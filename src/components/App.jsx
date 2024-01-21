@@ -37,7 +37,6 @@ export const App = () => {
         case 'Bad':
           return { ...prevState, bad: prevState.bad + 1 };
         default:
-          console.error('Error');
           return prevState;
       }
     });
@@ -48,7 +47,9 @@ export const App = () => {
     <>
       <Section title={'Please leave feedback'}>
         <FeedbackOptions
-          options={['Good', 'Neutral', 'Bad']}
+          options={Object.keys(state).map(
+            option => option.charAt(0).toUpperCase() + option.slice(1)
+          )}
           onLeaveFeedback={handleButtonClick}
         />
         <Statistics
