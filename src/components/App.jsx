@@ -58,7 +58,7 @@ export const App = () => {
           bad={state.bad}
           total={total}
           positivePercentage={countPositiveFeedbackPercentage()}
-        />{' '}
+        />
       </Section>
     </>
   );
